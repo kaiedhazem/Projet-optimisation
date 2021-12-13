@@ -58,7 +58,7 @@ def affichage(x,y,z):
     print(type(z))
     ax1.contourf(x,y,z)
     ax1.set_title('Figure ligne de niveaux  coloré')
-    plt.show()
+   
 
 
     fig2, ax2 = plt.subplots()
@@ -82,5 +82,5 @@ def affichage(x,y,z):
     ax5.set_title('Figure graphe 3D de la fonction avec un autre angle de vue ')
     p = ax5.plot_wireframe(x, y, z, rstride=1, cstride=1, alpha=0.5)
     ax5.view_init(25, 50)
-
+    plt.show()
 #afficheFctplus()

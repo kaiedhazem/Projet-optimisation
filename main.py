@@ -150,15 +150,12 @@ while (1):
                     print("\nRetour au menu précedent")
                     break 
             case '4' :
-                print ("1) Méthode du gradient conjugué avec le critère de Wolfe\n"
-                    +"2) Méthode du gradient conjugué pour les fonctions non linéaires\n"
-                    +"3) Quitter")
+                print ("\n1) Méthode du gradient conjugué pour les fonctions non linéaires\n"
+                    +"2) Quitter\n")
                 choix4=input("Entrez votre choix SVP : ")
                 if choix4 == '1':
-                    print("nestanaw fi ameni w fares") #fares ameni
-                elif choix4 == '2':
                     tache8.affichageFct4()  
-                elif choix4 == '3':
+                elif choix4 == '2':
                     print("\nRetour au menu précedent")
                     break
             case '5' : 
