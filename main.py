@@ -10,6 +10,7 @@ import tache4Fct2
 import tache4Fct3
 import tache5
 import tache6
+import tache7
 import tache8
 
 #Menu principal
@@ -32,7 +33,8 @@ while (1):
             while(1):  
               print ("\n1) Graphe et lignes de niveaux \n"
                     +"2) Vecteur gradient et matrice hessienne\n"
-                    +"3) Quitter")
+                    +"3) Méthode du gradient conjugué avec le critère de Wolfe\n"
+                    +"4) Quitter")
               choice=input("Tapez votre choix SVP: ")  
               match choice:
                   case '1':
@@ -48,6 +50,8 @@ while (1):
                       tache2.Grad(function,nbVar,sym)
                       tache2.Hess(function , sym) 
                   case '3':
+                      tache7.perso(function)     
+                  case '4':
                       print("\nRetour au menu précedent")
                       break 
                   case _: 
@@ -56,6 +60,7 @@ while (1):
           elif (int(nbVar)) > 2 : 
             while(1):   
               print ("\n1) Vecteur gradient et matrice hessienne\n"
+                    +"2) Méthode du gradient conjugué avec le critère de Wolfe\n"
                     +"3) Quitter")
               choice2=input("Tapez votre choix SVP: ")
               match choice2:
@@ -63,6 +68,9 @@ while (1):
                       tache2.Grad(function,nbVar,sym)
                       tache2.Hess(function , sym) 
                   case '2':
+                      tache7.perso(function)
+                      
+                  case '3':
                       print("\nRetour au menu précedent")
                       break  
                   case _: 
@@ -93,7 +101,7 @@ while (1):
                 if choix1 == '1':
                     tache6.affichageFct1()
                 elif choix1 == '2':
-                    print("nestanaw fi fares wala ameni")     #AMENI + FARES
+                    tache7.fonction1()
                 elif choix1 == '3':
                     tache1.afficheFct1()
                 elif choix1 == '4':
