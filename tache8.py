@@ -2,7 +2,7 @@ import numpy as np
 from numpy import *
 from scipy import optimize, special  
 from scipy.optimize import minimize
-
+from sympy import *
 def fun(X):
     A= mat([[4.0, 0.0], [0.0, 2.0]])
     X.shape=(2,1)
@@ -49,3 +49,12 @@ def affichageFct3():
     result = optimize.minimize(fun = f,x0 = [0,0],method='CG')
     print(result)
 
+def perso():
+    sym = []
+    nbVar = input("Nombre de variables: ")
+    for i in range(int(nbVar)):
+        var = input("Entrez la variable numéro " + str(i + 1) + ": ")
+        sym.append(Symbol(var))
+    function = sympify(input("Entrez la fonction: "))
+    result = optimize.minimize(fun = function,x0 = [0,0],method='CG')
+    print(result)

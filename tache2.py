@@ -3,12 +3,14 @@ import sympy as sp
 import numpy as np
 ## Fonction Calcul de gradient 
 def Grad(function,nbVar,sym):
-  try:  
-    print("Le vecteur gradient ")
+  try:   
     gradient = []
     for i in range(int(nbVar)):
       gradient.append(function.diff(sym[i]))
+      print("Dérivée par rapport à la variable " , sym[i] , ":")
       print(gradient[i])
+    print("Le vecteur gradient est = ")
+    print(gradient)
   except Exception as e:
       print(e)
 ## Fonction Calcul de la matrice Hessienne 
